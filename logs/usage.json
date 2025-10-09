@@ -1,6 +1,6 @@
 {
-    "usage_today": 0.15945104999999998,
-    "usage_this_month": 0.15945104999999998,
+    "usage_today": 0.0,
+    "usage_this_month": 0.2959477999999999,
     "daily_usage": [
         {
             "month": "2025-05",
@@ -140,10 +140,10 @@
             "model": "openai",
             "service": "openai/gpt-4.1",
             "pydantic_model_name": "WeatherModel",
-            "input_tokens": 4507,
-            "output_tokens": 1335,
-            "total_tokens": 5842,
-            "requests": 24,
+            "input_tokens": 5253,
+            "output_tokens": 1570,
+            "total_tokens": 6823,
+            "requests": 28,
             "cost": 0.0
         },
         {
@@ -181,6 +181,270 @@
             "total_tokens": 2774,
             "requests": 2,
             "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-mini",
+            "pydantic_model_name": "Hello_worldModel",
+            "input_tokens": 1351,
+            "output_tokens": 179,
+            "total_tokens": 1530,
+            "requests": 7,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "openai",
+            "service": "openai/gpt-4o",
+            "pydantic_model_name": "FileAnalysisModel",
+            "input_tokens": 682,
+            "output_tokens": 104,
+            "total_tokens": 786,
+            "requests": 2,
+            "cost": 0.002745
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "google",
+            "service": "google/gemini-2.0-flash-lite-001",
+            "pydantic_model_name": "Hello_worldModel",
+            "input_tokens": 171,
+            "output_tokens": 11,
+            "total_tokens": 182,
+            "requests": 1,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "anthropic",
+            "service": "anthropic/claude-3-haiku-20240307",
+            "pydantic_model_name": "Hello_worldModel",
+            "input_tokens": 612,
+            "output_tokens": 59,
+            "total_tokens": 671,
+            "requests": 1,
+            "cost": 0.00022675
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "openai",
+            "service": "openai/gpt-4",
+            "pydantic_model_name": "Hello_worldModel",
+            "input_tokens": 200,
+            "output_tokens": 22,
+            "total_tokens": 222,
+            "requests": 1,
+            "cost": 0.00732
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "google",
+            "service": "google/gemini-2.5-pro-preview-03-25",
+            "pydantic_model_name": "CVAnalysisResult",
+            "input_tokens": 5626,
+            "output_tokens": 9234,
+            "total_tokens": 25450,
+            "requests": 2,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "openai",
+            "service": "openai/openai/gpt-4o",
+            "pydantic_model_name": "EmailIntegrationResult",
+            "input_tokens": 25316,
+            "output_tokens": 11045,
+            "total_tokens": 36361,
+            "requests": 3,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/google/gemini-2.5-pro-preview",
+            "pydantic_model_name": "Hello_worldModel",
+            "input_tokens": 169,
+            "output_tokens": 537,
+            "total_tokens": 706,
+            "requests": 1,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "openai",
+            "service": "openai/gpt-4o",
+            "pydantic_model_name": "CVAnalysisResult",
+            "input_tokens": 20256,
+            "output_tokens": 4758,
+            "total_tokens": 25014,
+            "requests": 3,
+            "cost": 0.09822
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/anthropic/claude-3.5-sonnet",
+            "pydantic_model_name": "EmailIntegrationResult",
+            "input_tokens": 36119,
+            "output_tokens": 7456,
+            "total_tokens": 43575,
+            "requests": 4,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-2024-08-06",
+            "pydantic_model_name": "CVAnalysisResult",
+            "input_tokens": 42281,
+            "output_tokens": 7633,
+            "total_tokens": 49914,
+            "requests": 6,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-2024-08-06",
+            "pydantic_model_name": "EmailIntegrationResult",
+            "input_tokens": 3789,
+            "output_tokens": 1353,
+            "total_tokens": 5142,
+            "requests": 1,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-mini",
+            "pydantic_model_name": "AnonymizationResult",
+            "input_tokens": 22322,
+            "output_tokens": 2579,
+            "total_tokens": 24901,
+            "requests": 2,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-2024-08-06",
+            "pydantic_model_name": "FormattingResult",
+            "input_tokens": 4073,
+            "output_tokens": 2815,
+            "total_tokens": 6888,
+            "requests": 1,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-26",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-2024-08-06",
+            "pydantic_model_name": "QualityAssessmentResult",
+            "input_tokens": 4422,
+            "output_tokens": 1579,
+            "total_tokens": 6001,
+            "requests": 1,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-27",
+            "model": "open_router",
+            "service": "open_router/google/gemini-2.5-pro-preview",
+            "pydantic_model_name": "Hello_worldModel",
+            "input_tokens": 169,
+            "output_tokens": 689,
+            "total_tokens": 858,
+            "requests": 1,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-27",
+            "model": "open_router",
+            "service": "open_router/google/gemini-2.5-pro-preview",
+            "pydantic_model_name": "ProcessedFileContent",
+            "input_tokens": 334,
+            "output_tokens": 436,
+            "total_tokens": 770,
+            "requests": 2,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-27",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o",
+            "pydantic_model_name": "EditedContent",
+            "input_tokens": 789,
+            "output_tokens": 382,
+            "total_tokens": 1171,
+            "requests": 3,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-27",
+            "model": "openai",
+            "service": "openai/gpt-4o",
+            "pydantic_model_name": "EditingFeedback",
+            "input_tokens": 535,
+            "output_tokens": 427,
+            "total_tokens": 962,
+            "requests": 2,
+            "cost": 0.0056075
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-27",
+            "model": "openai",
+            "service": "openai/gpt-4o",
+            "pydantic_model_name": "CVAnalysisResult",
+            "input_tokens": 4303,
+            "output_tokens": 1162,
+            "total_tokens": 5465,
+            "requests": 1,
+            "cost": 0.0223775
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-27",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-2024-08-06",
+            "pydantic_model_name": "EmailIntegrationResult",
+            "input_tokens": 3892,
+            "output_tokens": 1228,
+            "total_tokens": 5120,
+            "requests": 1,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-28",
+            "model": "openai",
+            "service": "openai/gpt-4.1",
+            "pydantic_model_name": "WeatherModel",
+            "input_tokens": 374,
+            "output_tokens": 119,
+            "total_tokens": 493,
+            "requests": 2,
+            "cost": 0.0
         }
     ],
     "daily_tool_usage": [
@@ -188,51 +452,100 @@
             "month": "2025-05",
             "day": "2025-05-26",
             "tool_name": "final_result",
-            "calls": 131
+            "calls": 169
         },
         {
             "month": "2025-05",
             "day": "2025-05-26",
             "tool_name": "tool_get_weather",
-            "calls": 28
+            "calls": 30
         },
         {
             "month": "2025-05",
             "day": "2025-05-26",
             "tool_name": "tool_get_human_date",
-            "calls": 28
+            "calls": 30
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-27",
+            "tool_name": "final_result",
+            "calls": 10
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-28",
+            "tool_name": "tool_get_weather",
+            "calls": 1
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-28",
+            "tool_name": "tool_get_human_date",
+            "calls": 1
+        },
+        {
+            "month": "2025-05",
+            "day": "2025-05-28",
+            "tool_name": "final_result",
+            "calls": 1
         }
     ],
     "fill_percentage_by_pydantic_model": {
         "ProcessedFileContent": {
             "average": 100.0,
-            "count": 10,
-            "sum_total": 1000.0
+            "count": 12,
+            "sum_total": 1200.0
         },
         "EditedContent": {
             "average": 100.0,
-            "count": 15,
-            "sum_total": 1500.0
+            "count": 18,
+            "sum_total": 1800.0
         },
         "EditingFeedback": {
             "average": 100.0,
-            "count": 10,
-            "sum_total": 1000.0
+            "count": 12,
+            "sum_total": 1200.0
         },
         "Hello_worldModel": {
             "average": 100.0,
-            "count": 57,
-            "sum_total": 5700.0
+            "count": 69,
+            "sum_total": 6900.0
         },
         "WeatherModel": {
-            "average": 57.75,
-            "count": 28,
-            "sum_total": 1617.0
+            "average": 58.54838709677419,
+            "count": 31,
+            "sum_total": 1815.0
         },
         "FileAnalysisModel": {
             "average": 100.0,
+            "count": 13,
+            "sum_total": 1300.0
+        },
+        "CVAnalysisResult": {
+            "average": 100.0,
             "count": 11,
             "sum_total": 1100.0
+        },
+        "EmailIntegrationResult": {
+            "average": 97.57142857142857,
+            "count": 7,
+            "sum_total": 683.0
+        },
+        "AnonymizationResult": {
+            "average": 100.0,
+            "count": 1,
+            "sum_total": 100.0
+        },
+        "FormattingResult": {
+            "average": 100.0,
+            "count": 1,
+            "sum_total": 100.0
+        },
+        "QualityAssessmentResult": {
+            "average": 100.0,
+            "count": 1,
+            "sum_total": 100.0
         }
     },
     "fill_percentage_by_llm_model": {
@@ -287,19 +600,24 @@
             "sum_total": 400.0
         },
         "openai": {
-            "average": 66.2,
-            "count": 15,
-            "sum_total": 993.0
+            "average": 79.0,
+            "count": 29,
+            "sum_total": 2291.0
         },
         "google": {
             "average": 100.0,
-            "count": 2,
-            "sum_total": 200.0
+            "count": 5,
+            "sum_total": 500.0
         },
         "anthropic": {
             "average": 100.0,
-            "count": 2,
-            "sum_total": 200.0
+            "count": 3,
+            "sum_total": 300.0
+        },
+        "open_router": {
+            "average": 99.37037037037037,
+            "count": 27,
+            "sum_total": 2683.0
         }
     }
 }

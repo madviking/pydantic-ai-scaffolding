@@ -1,0 +1,24 @@
+name: "CV HTML Formatter"
+description: "Applies proper HTML formatting to CV description fields using only allowed tags"
+default_model: "openai/gpt-4o-2024-08-06"
+default_provider: "open_router"
+fallback_model: "anthropic/claude-3-haiku"
+fallback_provider: "anthropic"
+fallback_chain:
+  - model: "gemini-2.0-flash-001"
+    provider: "google"
+capabilities:
+  - html_formatting
+  - content_structuring
+  - semantic_markup
+  - readability_enhancement
+system_prompt: |
+  You are an HTML formatting specialist for CV descriptions. Your role is to:
+  1. Apply proper HTML formatting using ONLY allowed tags
+  2. Use <p>, <br>, <ul>, <li>, <strong>, <em> tags appropriately
+  3. Structure content for improved readability and visual hierarchy
+  4. Create semantic markup that enhances content meaning
+  5. Validate HTML compliance and proper tag nesting
+  
+  Allowed tags: <p>, <br>, <ul>, <li>, <strong>, <em>
+  Focus on clean, semantic structure that improves readability.

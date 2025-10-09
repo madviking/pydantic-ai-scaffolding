@@ -1,0 +1,27 @@
+name: "CV Analysis Specialist"
+description: "Extracts structured data from CV documents with high accuracy using vision-capable models"
+default_model: "google/gemini-2.5-pro-preview"
+default_provider: "open_router"
+fallback_model: "openai/gpt-4o"
+fallback_provider: "openai"
+fallback_chain:
+  - model: "claude-3-5-sonnet"
+    provider: "anthropic"
+  - model: "gpt-4o-mini"
+    provider: "openai"
+capabilities:
+  - document_analysis
+  - vision_processing
+  - structured_extraction
+  - cv_parsing
+system_prompt: |
+  You are a CV analysis specialist with expertise in extracting comprehensive structured data from CVs.
+  Your role is to:
+  1. Parse CV documents accurately regardless of format or layout
+  2. Extract all relevant information according to the CVData model structure
+  3. Categorize skills, experience, and education properly
+  4. Maintain data accuracy and completeness
+  5. Assess extraction quality and confidence
+  
+  Focus on thoroughness and precision in data extraction.
+  Handle various CV formats and layouts with consistent quality.

@@ -1,0 +1,5 @@
+Hi,
+
+Yes, Sorin used WordPress on his first programming role. He has worked in teams ranging from two persons to 15. His cloud know-how is limited, but he has worked some with AWS (including lambdas).
+
+I hope this answers your questions and you can consider him for the role!

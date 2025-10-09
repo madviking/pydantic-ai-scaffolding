@@ -6,8 +6,8 @@ agents:
     # File processing specialist - extracts content from various file types
     name: "File Processor"
     description: "Extracts and analyzes content from various file types including PDFs, images, and documents"
-    default_model: "google/gemini-2.5-pro-preview-03-25"
-    default_provider: "google"
+    default_model: "google/gemini-2.5-pro-preview"
+    default_provider: "open_router"
     fallback_model: "openai/gpt-4o"
     fallback_provider: "openai"
     fallback_chain:
@@ -35,7 +35,7 @@ agents:
     name: "Text Editor"
     description: "Improves text quality through grammar correction, style enhancement, and content organization"
     default_model: "openai/gpt-4o"
-    default_provider: "openai"
+    default_provider: "open_router"
     fallback_model: "claude-3-5-sonnet"
     fallback_provider: "anthropic"
     fallback_chain:
@@ -63,7 +63,7 @@ agents:
     name: "Feedback Agent"
     description: "Provides comprehensive editorial feedback and quality assessment"
     default_model: "anthropic/claude-3-5-sonnet-latest"
-    default_provider: "anthropic"
+    default_provider: "open_router"
     fallback_model: "openai/gpt-4o"
     fallback_provider: "openai"
     fallback_chain:
@@ -87,6 +87,155 @@ agents:
       Be thorough, fair, and constructive in your feedback.
       Focus on both strengths and areas for improvement.
 
+  cv_analysis:
+    # CV analysis specialist for structured data extraction
+    name: "CV Analysis Specialist"
+    description: "Extracts structured data from CV documents with high accuracy using vision-capable models"
+    default_model: "google/gemini-2.5-pro-preview"
+    #default_model: "openai/gpt-4o-2024-08-06"
+    default_provider: "open_router"
+    fallback_model: "openai/gpt-4o"
+    fallback_provider: "openai"
+    fallback_chain:
+      - model: "claude-3-5-sonnet"
+        provider: "anthropic"
+      - model: "gpt-4o-mini"
+        provider: "openai"
+    capabilities:
+      - document_analysis
+      - vision_processing
+      - structured_extraction
+      - cv_parsing
+    system_prompt: |
+      You are a CV analysis specialist with expertise in extracting comprehensive structured data from CVs.
+      Your role is to:
+      1. Parse CV documents accurately regardless of format or layout
+      2. Extract all relevant information according to the CVData model structure
+      3. Categorize skills, experience, and education properly
+      4. Maintain data accuracy and completeness
+      5. Assess extraction quality and confidence
+      
+      Focus on thoroughness and precision in data extraction.
+      Handle various CV formats and layouts with consistent quality.
+
+  email_integration:
+    # Email integration specialist for CV enhancement
+    name: "Email Integration Specialist"
+    description: "Integrates additional information from email communications with CV data"
+    default_model: "openai/gpt-4o-2024-08-06"
+    #default_model: "anthropic/claude-3.5-sonnet"
+    default_provider: "open_router"
+    fallback_model: "openai/gpt-4o"
+    fallback_provider: "openai"
+    fallback_chain:
+      - model: "claude-3-haiku"
+        provider: "anthropic"
+      - model: "gpt-4o-mini"
+        provider: "openai"
+    capabilities:
+      - data_integration
+      - context_analysis
+      - information_enhancement
+      - conflict_resolution
+    system_prompt: |
+      You are an email integration specialist. Your role is to:
+      1. Extract relevant information from email communications
+      2. Enhance CV data with additional context from emails
+      3. Integrate new information without overwriting existing data
+      4. Identify and resolve conflicts between CV and email data
+      5. Maintain data integrity throughout the integration process
+      
+      Focus on enhancing CV completeness while preserving original accuracy.
+      Handle various email formats and extract actionable insights.
+
+  cv_anonymization:
+    # CV anonymization and content enhancement specialist
+    name: "CV Anonymization & Enhancement"
+    description: "Anonymizes personal information and enhances content quality while preserving technical accuracy"
+    default_model: "openai/gpt-4o-2024-08-06"
+    #default_model: "anthropic/claude-3-5-sonnet"
+    default_provider: "open_router"
+    fallback_model: "openai/gpt-4o"
+    fallback_provider: "openai"
+    fallback_chain:
+      - model: "claude-3-haiku"
+        provider: "anthropic"
+      - model: "gpt-4o-mini"
+        provider: "openai"
+    capabilities:
+      - text_anonymization
+      - content_enhancement
+      - grammar_correction
+      - privacy_protection
+    system_prompt: |
+      You are a content anonymization and enhancement specialist. Your role is to:
+      1. Completely anonymize personal information (pronouns, names, companies)
+      2. Replace personal pronouns with 'they/them/their' consistently
+      3. Anonymize company names using systematic placeholders (Company A, B, etc.)
+      4. Enhance content quality through grammar and style improvements
+      5. Avoid overuse of adjectives and focus on concrete achievements
+      6. Preserve all technical accuracy and quantifiable metrics
+      
+      Anonymization must be 100% complete. Content enhancement should focus on clarity and professionalism.
+
+  cv_formatting:
+    # CV HTML formatting specialist
+    name: "CV HTML Formatter"
+    description: "Applies proper HTML formatting to CV description fields using only allowed tags"
+    default_model: "openai/gpt-4o-2024-08-06"
+    default_provider: "open_router"
+    fallback_model: "anthropic/claude-3-haiku"
+    fallback_provider: "anthropic"
+    fallback_chain:
+      - model: "gemini-2.0-flash-001"
+        provider: "google"
+    capabilities:
+      - html_formatting
+      - content_structuring
+      - semantic_markup
+      - readability_enhancement
+    system_prompt: |
+      You are an HTML formatting specialist for CV descriptions. Your role is to:
+      1. Apply proper HTML formatting using ONLY allowed tags
+      2. Use <p>, <br>, <ul>, <li>, <strong>, <em> tags appropriately
+      3. Structure content for improved readability and visual hierarchy
+      4. Create semantic markup that enhances content meaning
+      5. Validate HTML compliance and proper tag nesting
+      
+      Allowed tags: <p>, <br>, <ul>, <li>, <strong>, <em>
+      Focus on clean, semantic structure that improves readability.
+
+  cv_quality:
+    # CV quality assurance specialist
+    name: "CV Quality Assurance"
+    description: "Validates CV processing quality, anonymization completeness, and formatting compliance"
+    #default_model: "anthropic/claude-3-5-sonnet"
+    default_model: "openai/gpt-4o-2024-08-06"
+    default_provider: "open_router"
+    fallback_model: "openai/gpt-4o"
+    fallback_provider: "openai"
+    fallback_chain:
+      - model: "claude-3-haiku"
+        provider: "anthropic"
+      - model: "gpt-4o-mini"
+        provider: "openai"
+    capabilities:
+      - quality_assessment
+      - validation
+      - metrics_generation
+      - compliance_checking
+    system_prompt: |
+      You are a quality assurance specialist for CV processing. Your role is to:
+      1. Comprehensively validate processed CV data across multiple dimensions
+      2. Verify complete anonymization (no personal pronouns or names remain)
+      3. Validate HTML formatting compliance and semantic correctness
+      4. Assess content quality, technical accuracy, and consistency
+      5. Generate detailed quality metrics and actionable recommendations
+      6. Ensure processing meets quality thresholds before approval
+      
+      Critical requirements: Anonymization score ≥95%, Overall quality ≥85%
+      Be thorough and objective in quality assessment.
+
 # Workflow configurations can be added here too
 workflows:
   content_editing:
@@ -97,3 +246,17 @@ workflows:
       - feedback
     max_iterations: 2
     quality_threshold: 0.85
+
+  cv_processing:
+    description: "Complete CV processing pipeline with anonymization, enhancement, and formatting"
+    agents:
+      - cv_analysis
+      - email_integration
+      - cv_anonymization
+      - cv_formatting
+      - cv_quality
+    max_iterations: 1
+    quality_threshold: 0.85
+    quality_validation: true
+    anonymization_threshold: 0.95
+    html_validation_required: true

@@ -9,3 +9,16 @@ workflows:
     max_iterations: 2
     quality_threshold: 0.85
 
+  cv_processing:
+    description: "Complete CV processing pipeline with anonymization, enhancement, and formatting"
+    agents:
+      - cv_analysis
+      - email_integration
+      - cv_anonymization
+      - cv_formatting
+      - cv_quality
+    max_iterations: 1
+    quality_threshold: 0.85
+    quality_validation: true
+    anonymization_threshold: 0.95
+    html_validation_required: true

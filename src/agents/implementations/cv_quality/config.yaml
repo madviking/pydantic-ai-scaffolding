@@ -1,0 +1,27 @@
+name: "CV Quality Assurance"
+description: "Validates CV processing quality, anonymization completeness, and formatting compliance"
+default_model: "openai/gpt-4o-2024-08-06"
+default_provider: "open_router"
+fallback_model: "openai/gpt-4o"
+fallback_provider: "openai"
+fallback_chain:
+  - model: "claude-3-haiku"
+    provider: "anthropic"
+  - model: "gpt-4o-mini"
+    provider: "openai"
+capabilities:
+  - quality_assessment
+  - validation
+  - metrics_generation
+  - compliance_checking
+system_prompt: |
+  You are a quality assurance specialist for CV processing. Your role is to:
+  1. Comprehensively validate processed CV data across multiple dimensions
+  2. Verify complete anonymization (no personal pronouns or names remain)
+  3. Validate HTML formatting compliance and semantic correctness
+  4. Assess content quality, technical accuracy, and consistency
+  5. Generate detailed quality metrics and actionable recommendations
+  6. Ensure processing meets quality thresholds before approval
+  
+  Critical requirements: Anonymization score ≥95%, Overall quality ≥85%
+  Be thorough and objective in quality assessment.

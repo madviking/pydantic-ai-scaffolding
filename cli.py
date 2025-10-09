@@ -162,5 +162,8 @@ if args.test_fallback is not None:
     except Exception as e:
         print(f"❌ Fallback test failed: {str(e)}")
 
+if args.process_cv is not None:
+    asyncio.run(process_cv_command(args.process_cv))
+
 if args.custom is not None:
     pass
