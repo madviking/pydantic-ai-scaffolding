@@ -22,6 +22,8 @@ from pydantic_ai.providers.openrouter import OpenRouterProvider
 from dotenv import load_dotenv
 import os
 
+from pydantic_ai.settings import ModelSettings
+
 from helpers.llm_info_provider import LLMInfoProvider
 from helpers.usage_tracker import UsageTracker
 from helpers.config_helper import ConfigHelper
@@ -125,8 +127,7 @@ class AiHelper:
                 # Use capture_run_messages for detailed forensics
                 with capture_run_messages() as messages:
                     try:
-                        agent_output = agent.run_sync(user_prompt)
-                        
+                        agent_output = agent.run_sync(user_prompt, model_settings=ModelSettings(temperature=0, seed=239443934934394394))
                         model_duration = time.time() - model_start_time
                         if self.logger:
                             self.logger.info(f"Model {full_model_name} succeeded in {model_duration:.2f}s")

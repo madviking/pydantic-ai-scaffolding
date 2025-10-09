@@ -10,17 +10,16 @@ from datetime import datetime
 from pathlib import Path
 
 from agents.example_usage import main_agent_example
-from agents.process_cv import process_cv_command
 from ai_helper import AiHelper
 from helpers.cli_helper_functions import flag_non_working_models, flag_file_capable_models
 from helpers.llm_info_provider import LLMInfoProvider
 from helpers.usage_tracker import UsageTracker, format_usage_data
-from helpers.test_helpers_utils import test_hello_world, test_weather, test_file_analysis
-
+from helpers.test_helpers_utils import test_hello_world, test_weather, test_file_analysis, test_deterministic
 
 # check command line flags
 parser = argparse.ArgumentParser()
 parser.add_argument('--update_non_working', nargs='*', help='Updates non-working models in the config file')
+parser.add_argument('--deterministic_test', nargs='*', help='Runs deterministic tests')
 parser.add_argument('--test_file_capability', nargs='*', help='Test file capability and update file_capable_models in config')
 parser.add_argument('--simple_test', nargs='*', help='Run a simple test case without tool calling')
 parser.add_argument('--test_tools', nargs='*', help='Run a test case with tool calling')
@@ -83,6 +82,13 @@ if args.simple_test is not None:
     result, report = test_hello_world(model_name='google/gemini-2.5-pro-preview')
     print(result.model_dump_json(indent=4))
     print(report.model_dump_json(indent=4))
+
+if args.deterministic_test is not None:
+    ## test case with tool calling
+
+    for i in range(4):
+        result, report = test_deterministic(model_name='anthropic/claude-3-7-sonnet-latest',provider='anthropic')
+        print(result.model_dump_json(indent=4))
 
 if args.test_tools is not None:
     if 'all' in args.test_tools:

@@ -3,7 +3,7 @@ from typing import Tuple, TypeVar
 import pytest
 from ai_helper import AiHelper
 from py_models.base import LLMReport
-from py_models.hello_world.model import Hello_worldModel
+from py_models.hello_world.model import Hello_worldModel, RouteModel
 from py_models.weather.model import WeatherModel
 from py_models.file_analysis.model import FileAnalysisModel
 
@@ -31,6 +31,11 @@ def test_hello_world(model_name: str = 'mistralai/ministral-3b', provider='open_
     result, report = base.get_result(prompt, Hello_worldModel, llm_model_name=model_name, provider=provider)
     return result, report
 
+def test_deterministic(model_name: str = 'anthropic/claude-sonnet-4', provider='anthropic'):
+    base = AiHelper()
+    prompt = """What is the best route from Potsdam to Berghain? """
+    result, report = base.get_result(prompt, RouteModel, llm_model_name=model_name, provider=provider)
+    return result, report
 
 def test_weather(model_name: str = 'openai/gpt-4.1', provider='openai'):
     base = AiHelper()

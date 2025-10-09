@@ -1,6 +1,6 @@
 {
-    "usage_today": 0.15945104999999998,
-    "usage_this_month": 0.15945104999999998,
+    "usage_today": 0.0,
+    "usage_this_month": 0.0,
     "daily_usage": [
         {
             "month": "2025-05",
@@ -181,6 +181,54 @@
             "total_tokens": 2774,
             "requests": 2,
             "cost": 0.0
+        },
+        {
+            "month": "2025-10",
+            "day": "2025-10-09",
+            "model": "open_router",
+            "service": "open_router/google/gemini-2.5-pro-preview",
+            "pydantic_model_name": "Hello_worldModel",
+            "input_tokens": 408,
+            "output_tokens": 1065,
+            "total_tokens": 1473,
+            "requests": 3,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-10",
+            "day": "2025-10-09",
+            "model": "open_router",
+            "service": "open_router/openai/gpt-4o-mini",
+            "pydantic_model_name": "RouteModel",
+            "input_tokens": 277,
+            "output_tokens": 499,
+            "total_tokens": 776,
+            "requests": 3,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-10",
+            "day": "2025-10-09",
+            "model": "open_router",
+            "service": "open_router/anthropic/claude-sonnet-4",
+            "pydantic_model_name": "RouteModel",
+            "input_tokens": 10285,
+            "output_tokens": 4581,
+            "total_tokens": 14866,
+            "requests": 20,
+            "cost": 0.0
+        },
+        {
+            "month": "2025-10",
+            "day": "2025-10-09",
+            "model": "anthropic",
+            "service": "anthropic/claude-3-7-sonnet-latest",
+            "pydantic_model_name": "RouteModel",
+            "input_tokens": 1772,
+            "output_tokens": 1248,
+            "total_tokens": 3020,
+            "requests": 4,
+            "cost": 0.0
         }
     ],
     "daily_tool_usage": [
@@ -201,6 +249,12 @@
             "day": "2025-05-26",
             "tool_name": "tool_get_human_date",
             "calls": 28
+        },
+        {
+            "month": "2025-10",
+            "day": "2025-10-09",
+            "tool_name": "final_result",
+            "calls": 30
         }
     ],
     "fill_percentage_by_pydantic_model": {
@@ -221,8 +275,8 @@
         },
         "Hello_worldModel": {
             "average": 100.0,
-            "count": 57,
-            "sum_total": 5700.0
+            "count": 60,
+            "sum_total": 6000.0
         },
         "WeatherModel": {
             "average": 57.75,
@@ -233,6 +287,11 @@
             "average": 100.0,
             "count": 11,
             "sum_total": 1100.0
+        },
+        "RouteModel": {
+            "average": 100.0,
+            "count": 22,
+            "sum_total": 2200.0
         }
     },
     "fill_percentage_by_llm_model": {
@@ -298,8 +357,13 @@
         },
         "anthropic": {
             "average": 100.0,
-            "count": 2,
-            "sum_total": 200.0
+            "count": 6,
+            "sum_total": 600.0
+        },
+        "open_router": {
+            "average": 100.0,
+            "count": 21,
+            "sum_total": 2100.0
         }
     }
 }
